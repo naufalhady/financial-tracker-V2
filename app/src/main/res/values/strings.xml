@@ -1,0 +1,83 @@
+<resources>
+    <!--Base-->
+    <string name="app_name">Financial Tracker</string>
+    <string name="default_text">Deploy ke 1</string>
+    <string name="header_home">Beranda</string>
+    <string name="header_add_transaction">Add Transaction</string>
+    <string name="header_profil">Tentang Saya</string>
+
+    <!--Randomly-->
+    <string name="text_all_delete">Hapus Semua Data Transaksi</string>
+    <string name="text_delete_transaction">Hapus Transaksi</string>
+    <string name="text_edit_transaction">Edit Transaksi</string>
+    <string name="text_update_transaction">Simpan Data Baru</string>
+    <string name="text_save_transaction">Simpan Transaksi</string>
+    <string name="text_ui_mode">UI Mode</string>
+    <string name="text_total_income">Jumlah Pemasukan</string>
+    <string name="text_total_expense">Jumlah Pengeluaran</string>
+    <string name="text_total_balance">Jumlah Saldo</string>
+    <string name="text_recent_transactions">Transaksi terkini</string>
+    <string name="text_view_all">View all</string>
+    <string name="text_expense_when">Pada Tanggal</string>
+    <string name="text_expense_amount">Jumlah</string>
+    <string name="text_expense_transaction_type"> Tipe transaksi</string>
+    <string name="text_expense_tag">Tag</string>
+    <string name="text_expense_note">Catatan</string>
+    <string name="text_expense_add_transaction">Simpan Transaksi</string>
+    <string name="text_expense_rupiah">Rp</string>
+    <string name="success_expense_saved">Transaksi berhasil disimpan</string>
+    <string name="success_transaction_delete">Transaksi berhasil dihapus!</string>
+    <string name="text_title">Judul</string>
+    <string name="text_about">Tentang</string>
+    <string name="text_filter">Filter</string>
+    <string name="text_edit">Edit</string>
+    <string name="text_createdAt">Dibuat pada</string>
+    <string name="text_allIncomeTrc">Semua Transaksi Pemasukan</string>
+    <string name="text_allExpenseTrc">Semua Transaksi Pengeluaran</string>
+    <string name="nominalKosong">Rp 0</string>
+    <string name="expense">Pengeluaran</string>
+    <string name="income">Pemasukan</string>
+    <string name="profil">Profil</string>
+    <string name="update_transaction">Update Transaksi</string>
+    <string name="detail_transaction">Detail Transaksi</string>
+    <string name="blankText">Text</string>
+
+    <!--Profile Header-->
+    <string name="nama">Nama</string>
+    <string name="ttl">Tempat, tanggal lahir</string>
+    <string name="judul">Judul Proyek Utama Informatika</string>
+    <string name="dosbing">Dosen Pembimbing</string>
+
+    <!--Profile Value-->
+    <string name="namaVal">Muhammad Naufal Hady Anshari Jaelani</string>
+    <string name="ttlVal">Ciamis, Provinsi Jawa Barat, 4 maret 2003</string>
+    <string name="judulVal">Perancangan Aplikasi Financial Tracker Berbasis Mobile Menggunakan Arsitektur MVVM</string>
+    <string name="dosbingVal">Ibu Yuli Asriningtias, S.Kom., M.Kom.</string>
+
+    <!--NAVBAR-->
+    <string name="nav_beranda">Beranda</string>
+    <string name="nav_pemasukan">Pemasukan</string>
+    <string name="nav_pengeluaran">Pengeluaran</string>
+    <string name="nav_profil">Profil</string>
+    <string name="nav_tambah_tansaksi">Tambah transaksi</string>
+
+    <!--Nominal-->
+    <string name="text_total_nominal">20.000</string>
+    <string name="text_total_income_nominal">30.000.000</string>
+    <string name="text_total_expense_nominal">30000.000</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Spinner-->
+    <string-array name="TrcType">
+        <item>Pilih Jenis Transaksi</item>
+        <item>Pemasukan</item>
+        <item>Pengeluaran</item>
+    </string-array>
+    <string-array name="tag">
+        <item>Pilih Kategori Transaksi</item>
+        <item>Kebutuhan Sehari-hari</item>
+        <item>Tabungan dan Investasi</item>
+        <item>Gaya hidup</item>
+        <item>Hal lainnya</item>
+    </string-array>
+</resources>

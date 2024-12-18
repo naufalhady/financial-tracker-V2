@@ -1,0 +1,10 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textViewDropDown"
+    android:layout_width="match_parent"
+    android:textColor="@color/blue_dark"
+    android:padding="14dp"
+    android:layout_height="wrap_content"
+    android:text="@string/blankText"
+    android:background="@color/white"
+    android:fontFamily="@font/montserrat_regular"/>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_selector"
+        android:title="@string/nav_beranda"/>
+    <item
+        android:id="@+id/nav_pemasukan"
+        android:icon="@drawable/pemasukan_selector"
+        android:title="@string/nav_pemasukan"/>
+    <item
+        android:id="@+id/nav_add"
+        android:icon="@drawable/selector_add_btn"
+        android:title="@string/nav_tambah_tansaksi"/>
+     <item
+        android:id="@+id/nav_pengeluaran"
+        android:icon="@drawable/pengeluaran_selector"
+        android:title="@string/nav_pengeluaran"/>
+     <item
+        android:id="@+id/nav_profil"
+        android:icon="@drawable/profil_selector"
+        android:title="@string/nav_profil"/>
+</menu>

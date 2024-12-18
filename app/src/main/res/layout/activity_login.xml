@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".views.Login">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        app:srcCompat="@drawable/ic_splashscreen"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:textSize="12sp"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:hint="Email"
+        android:background="@drawable/bg_ed_email"
+        android:padding="10dp"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+        android:hint="Password"
+        android:background="@drawable/bg_ed_email"
+        android:padding="10dp"
+        android:layout_marginTop="25dp"
+        android:textSize="12sp"/>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="270dp"
+        android:text="Login"
+        android:backgroundTint="@color/grey_800"
+        />
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Register"
+        android:backgroundTint="@color/grey_50"
+        android:textColor="@color/grey_800"
+        />
+</LinearLayout>

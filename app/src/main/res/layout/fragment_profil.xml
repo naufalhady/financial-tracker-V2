@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue_dark"
+    android:orientation="vertical"
+    tools:context=".views.fragment.ProfilFragment">
+
+    <include
+        android:id="@+id/headerProfil"
+        layout="@layout/header_profil"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginTop="0dp"
+        android:layout_gravity="top" />
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/profile_pic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/nama"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="25dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/blue_card"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/namaVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/namaVal"
+            android:padding="13dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/profileTtl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/ttl"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="25dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/blue_card"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/ttlVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlVal"
+            android:padding="13dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/profileJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/judul"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="25dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/blue_card"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/judulVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/judulVal"
+            android:padding="13dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/profileDosbing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/dosbing"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="25dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/blue_card"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/dosbingVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dosbingVal"
+            android:padding="13dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"/>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_hapus_semua"
+        style="@style/PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/text_all_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createdAt"
+        android:textAllCaps="false"/>
+    </LinearLayout>

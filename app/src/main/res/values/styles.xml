@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="rippleColor">@color/blue_500</item>
+        <item name="backgroundTint">@color/blue_500</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="PrimaryEditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="boxBackgroundColor">@color/background</item>
+        <item name="hintAnimationEnabled">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/blue_dark</item>
+        <item name="backgroundTint">@color/blue_500</item>
+    </style>
+
+    <!-- Style for Spinner Item -->
+    <style name="SpinnerItemStyle" parent="android:TextAppearance.Widget.TextView">
+        <item name="android:textColor">@color/blue_dark</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/blue_dark</item>
+    </style>
+
+    <!-- Style for Spinner Drop Down Item -->
+    <style name="SpinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView">
+        <item name="android:textColor">@color/blue_dark</item>
+        <item name="android:textSize">16sp</item>
+        <item name="backgroundColor">@color/white</item>
+    </style>
+
+    <!-- Custom style for TextInputLayout -->
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextAppearance">@style/CustomHintTextAppearance</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="hintTextColor">@color/blue_dark</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="endIconTint">@color/blue_dark</item>
+        <item name="prefixTextColor">@color/blue_dark</item>
+        <item name="cursorColor">@color/blue_dark</item>
+    </style>
+    <!-- Custom style for TextInputEditText -->
+    <style name="CustomTextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/blue_dark</item>
+        <item name="android:textColorHint">@color/blue_dark</item>
+        <item name="android:inputType">text</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="android:textCursorDrawable">@drawable/custom_cursor</item>
+    </style>
+    <!-- Custom hint text appearance -->
+    <style name="CustomHintTextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/blue_dark</item>
+    </style>
+///
+
+    <!-- Gaya kustom untuk popup dropdown -->
+    <style name="CustomSpinnerDropDownStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <!-- Atur tampilan item dalam popup dropdown -->
+        <item name="android:textColor">@color/blue_dark</item>
+        <!-- Atur warna latar belakang popup dropdown -->
+        <item name="android:background">@drawable/bg_ed_email</item>
+        <!-- Atur padding atau atribut lainnya sesuai kebutuhan -->
+    </style>
+    <!-- Tema kustom untuk popup dropdown -->
+    <style name="CustomSpinnerDropDownTheme" parent="ThemeOverlay.AppCompat.Light">
+        <!-- Atur gaya popup dropdown yang telah Anda buat -->
+        <item name="android:dropDownListViewStyle">@style/CustomSpinnerDropDownStyle</item>
+    </style>
+</resources>
