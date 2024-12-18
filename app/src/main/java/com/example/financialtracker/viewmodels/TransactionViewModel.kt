@@ -1,7 +1,6 @@
 package com.example.financialtracker.viewmodels
 
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.example.financialtracker.model.Transaction
@@ -10,6 +9,7 @@ import com.example.financialtracker.utility.indonesiaRupiah
 
 class TransactionViewModel : ViewModel() {
     private val trcRepo = TransactionRepository
+    private val repository = TransactionRepository
 
     fun insertTrc(context: Context, transaction: Transaction) {
         trcRepo.insertTrc(context, transaction)
@@ -64,5 +64,13 @@ class TransactionViewModel : ViewModel() {
     private fun calculateTotalExpense(transactions: List<Transaction>): Double {
         return transactions.filter { it.transactionType == "Pengeluaran" }
             .sumOf { it.amount }
+    }
+
+    fun getAllTransactions(context: Context): LiveData<List<Transaction>> {
+        return repository.getAllTransactions(context)
+    }
+
+    fun getTransactionsByMonth(context: Context, month: String): LiveData<List<Transaction>> {
+        return repository.getTransactionsByMonth(context, month)
     }
 }

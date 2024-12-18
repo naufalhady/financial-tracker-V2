@@ -32,6 +32,9 @@ interface TransactionDao {
     suspend fun deleteAllTransactions()  // Query untuk menghapus semua transaksi
 
     // Query untuk mendapatkan transaksi berdasarkan rentang tanggal
-    @Query("SELECT * FROM transactions WHERE createdAt BETWEEN :startDate AND :endDate ORDER BY createdAt DESC")
-    fun getTransactionsByDateRange(startDate: Long, endDate: Long): LiveData<List<Transaction>>
+//    @Query("SELECT * FROM transactions WHERE strftime('%m', date / 1000, 'unixepoch') = :month")
+//    fun getTransactionsByMonth(month: String): LiveData<List<Transaction>>
+
+    @Query("SELECT * FROM transactions WHERE SUBSTR(date, 4, 2) = :month")
+    fun getTransactionsByMonth(month: String): LiveData<List<Transaction>>
 }

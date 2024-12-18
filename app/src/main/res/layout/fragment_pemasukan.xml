@@ -8,7 +8,6 @@
     tools:context=".views.fragment.PemasukanFragment"
     android:background="@color/blue_dark">
 
-
     <include
         android:id="@+id/headerIncome"
         layout="@layout/header_income"
@@ -24,37 +23,19 @@
         android:fontFamily="@font/montserrat_regular"
         android:text="@string/text_allIncomeTrc" />
 
-    <LinearLayout
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <!-- Spinner untuk memilih bulan -->
-        <Spinner
-            android:id="@+id/spinnerBulan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <!-- EditText untuk memilih tahun -->
-        <EditText
-            android:id="@+id/editTextTahun"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Masukkan Tahun"
-            android:inputType="number" />
-
-        <!-- RecyclerView untuk menampilkan transaksi -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewPemasukan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="18dp"
+        android:entries="@array/months"
+        android:fontFamily="@font/montserrat_regular"
+        android:spinnerMode="dropdown" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/transaction_rv"
+        android:id="@+id/recyclerViewPemasukan"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

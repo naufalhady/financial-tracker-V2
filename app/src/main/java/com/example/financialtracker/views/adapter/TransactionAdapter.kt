@@ -10,50 +10,24 @@ import com.example.financialtracker.model.Transaction
 import com.example.financialtracker.utility.indonesiaRupiah
 
 class TransactionAdapter(
-    private val allTrc: List<Transaction> = ArrayList(),
+    private var transactionList: List<Transaction> = emptyList(),
     private val onItemClick: (Transaction) -> Unit
 ) : RecyclerView.Adapter<TransactionAdapter.TrcVH>() {
 
-    inner class TrcVH(val binding: ItemTransactionLayoutBinding) :
+    inner class TrcVH(private val binding: ItemTransactionLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Transaction) {
+        fun bind(transaction: Transaction) {
             binding.apply {
-                transactionName.text = item.title
-                transactionCategory.text = item.tag
+                transactionName.text = transaction.title
+                transactionCategory.text = transaction.tag
 
-                when (item.transactionType) {
-                    "Pemasukan" -> {
-                        transactionAmount.setTextColor(
-                            ContextCompat.getColor(
-                                transactionAmount.context,
-                                R.color.income
-                            )
-                        )
-                        transactionAmount.text = "+ ".plus(indonesiaRupiah(item.amount))
-                    }
-                    "Pengeluaran" -> {
-                        transactionAmount.setTextColor(
-                            ContextCompat.getColor(
-                                transactionAmount.context,
-                                R.color.expense
-                            )
-                        )
-                        transactionAmount.text = "- ".plus(indonesiaRupiah(item.amount))
-                    }
-                }
-                when (item.tag) {
-                    "Kebutuhan Sehari-hari" -> transactionIconView.setImageResource(R.drawable.ic_food)
-                    "Tabungan dan Investasi" -> transactionIconView.setImageResource(R.drawable.ic_savings)
-                    "Gaya hidup" -> transactionIconView.setImageResource(R.drawable.ic_lifestyle)
-                    "Hal lainnya" -> transactionIconView.setImageResource(R.drawable.ic_others)
-                    else -> transactionIconView.setImageResource(R.drawable.ic_others)
-                }
+                val color = if (transaction.transactionType == "Pemasukan")
+                    R.color.income else R.color.expense
+                transactionAmount.setTextColor(ContextCompat.getColor(transactionAmount.context, color))
+                transactionAmount.text = (if (transaction.transactionType == "Pemasukan") "+ " else "- ") +
+                        indonesiaRupiah(transaction.amount)
 
-                root.setOnClickListener {
-                    onItemClick(item)
-                }
-
-
+                root.setOnClickListener { onItemClick(transaction) }
             }
         }
     }
@@ -64,11 +38,17 @@ class TransactionAdapter(
     }
 
     override fun onBindViewHolder(holder: TrcVH, position: Int) {
-        holder.bind(allTrc[position])
+        holder.bind(transactionList[position])
     }
 
-    override fun getItemCount(): Int = allTrc.size
+    override fun getItemCount(): Int = transactionList.size
+
+    fun updateData(newTransactionList: List<Transaction>) {
+        transactionList = newTransactionList
+        notifyDataSetChanged()
+    }
 }
+
 
 
 
