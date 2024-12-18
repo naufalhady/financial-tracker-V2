@@ -24,9 +24,21 @@
         android:fontFamily="@font/montserrat_regular"
         android:text="@string/text_allExpenseTrc"/>
 
+    <Spinner
+        android:id="@+id/spinner_pengeluaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:entries="@array/months"
+        android:fontFamily="@font/montserrat_regular"
+        android:spinnerMode="dropdown" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:padding="12dp"
-        android:id="@+id/transaction_rv"
+        android:id="@+id/recyclerViewPengeluaran"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
