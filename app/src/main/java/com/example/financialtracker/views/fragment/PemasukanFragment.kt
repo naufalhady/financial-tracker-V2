@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -54,25 +55,31 @@ class PemasukanFragment : Fragment() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val selectedMonth = if (position == 0) "" else String.format("%02d", position)
 
-
                 if (selectedMonth.isEmpty()) {
-                    // Jika tidak ada filter bulan, ambil semua transaksi
-                    transactionViewModel.getAllTransactions(requireContext()).observe(viewLifecycleOwner) { transactions ->
-                        transactionAdapter.updateData(transactions)
-                    }
+                    // Ambil semua transaksi pengeluaran
+                    transactionViewModel.getIncomeTransactions(requireContext())
+                        ?.observe(viewLifecycleOwner) { transactions ->
+                            if (transactions.isNullOrEmpty()) {
+                                Toast.makeText(requireContext(), "Tidak ada data transaksi!", Toast.LENGTH_SHORT).show()
+                            }
+                            transactionAdapter.updateData(transactions)
+                        }
                 } else {
-                    // Jika bulan dipilih, ambil transaksi berdasarkan bulan
-                    transactionViewModel.getTransactionsByMonth(requireContext(), selectedMonth)
+                    // Filter transaksi pengeluaran berdasarkan bulan
+                    transactionViewModel.getIncomeTransactionsByMonth(requireContext(), selectedMonth)
                         .observe(viewLifecycleOwner) { transactions ->
+                            if (transactions.isNullOrEmpty()) {
+                                Toast.makeText(requireContext(), "Tidak ada data transaksi untuk bulan ini!", Toast.LENGTH_SHORT).show()
+                            }
                             transactionAdapter.updateData(transactions)
                         }
                 }
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                // Kosongkan RecyclerView jika tidak ada pilihan
                 transactionAdapter.updateData(emptyList())
             }
         }
     }
+
 }

@@ -70,8 +70,8 @@ class TransactionViewModel : ViewModel() {
         return repository.getAllTransactions(context)
     }
 
-    fun getTransactionsByMonth(context: Context, month: String): LiveData<List<Transaction>> {
-        return repository.getTransactionsByMonth(context, month)
+    fun getIncomeTransactionsByMonth(context: Context, month: String): LiveData<List<Transaction>> {
+        return repository.getTransactionsByMonth(context, month, "Pemasukan")
     }
 
     fun getExpenseTransactionsByMonth(context: Context, month: String): LiveData<List<Transaction>> {

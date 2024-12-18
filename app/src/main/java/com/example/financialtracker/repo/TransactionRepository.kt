@@ -79,10 +79,11 @@ class TransactionRepository {
         return AppDatabase.getDatabase(context)
         }
 
-        fun getTransactionsByMonth(context: Context, month: String): LiveData<List<Transaction>> {
-            val transactionDao = AppDatabase.getDatabase(context).transactionDao()
-            return transactionDao.getTransactionsByMonth(month)
-        }
+//        fun getTransactionsByMonth(context: Context, month: String, type: String): LiveData<List<Transaction>> {
+//            val transactionDao = getDatabase(context).transactionDao()
+//            return transactionDao.getTransactionsByMonth(type, month)
+//        }
+
 
         fun getTransactionsByMonth(context: Context, month: String, type: String): LiveData<List<Transaction>> {
             val transactionDao = getDatabase(context).transactionDao()

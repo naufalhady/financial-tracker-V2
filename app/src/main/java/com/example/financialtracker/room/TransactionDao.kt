@@ -35,8 +35,8 @@ interface TransactionDao {
 //    @Query("SELECT * FROM transactions WHERE strftime('%m', date / 1000, 'unixepoch') = :month")
 //    fun getTransactionsByMonth(month: String): LiveData<List<Transaction>>
 
-    @Query("SELECT * FROM transactions WHERE SUBSTR(date, 4, 2) = :month")
-    fun getTransactionsByMonth(month: String): LiveData<List<Transaction>>
+//    @Query("SELECT * FROM transactions WHERE SUBSTR(date, 4, 2) = :month")
+//    fun getTransactionsByMonth(month: String): LiveData<List<Transaction>>
 
     @Query("SELECT * FROM transactions WHERE transactionType = :type AND SUBSTR(date, 4, 2) = :month")
     fun getTransactionsByMonth(type: String, month: String): LiveData<List<Transaction>>
